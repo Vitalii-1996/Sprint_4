@@ -34,6 +34,13 @@ class TestBooksCollector:
         book_name = 'Sample_book'
         new_book_collector.add_new_book(book_name)
         new_book_collector.set_book_genre(book_name, book_genre)
+        assert new_book_collector.get_book_genre(book_name) != None
+
+    def test_get_book_genre_book_name_returns_genre(self, new_book_collector):
+        book_name = 'Sample_book'
+        book_genre = 'Детективы'
+        new_book_collector.add_new_book(book_name)
+        new_book_collector.set_book_genre(book_name, book_genre)
         assert new_book_collector.get_book_genre(book_name) == book_genre
 
     @pytest.mark.parametrize(
