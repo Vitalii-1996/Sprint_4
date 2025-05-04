@@ -73,3 +73,10 @@ class TestBooksCollector:
         generate_all_books.delete_book_from_favorites(data.default_book_names[0])       
         len_after = len(generate_all_books.get_list_of_favorites_books())
         assert len_before > len_after
+
+    def test_get_books_genre_returns_books_genre(self, generate_all_books):
+        all_books_genre = {}
+        for index, name in enumerate(data.default_book_names):
+            all_books_genre[name] = data.pre_set_genre[index]
+        books_genre = generate_all_books.get_books_genre()
+        assert books_genre == all_books_genre

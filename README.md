@@ -12,6 +12,7 @@
 9. `test_add_book_in_favorites_add_book_to_favorites_list` - тест добавления книги в избранный список, проверяется наличие книги с заданным названием.
 10. `test_add_book_in_favorites_increase_favorites_list` - добавление книги в избранный список должно увеличить длину списка.
 11. `test_delete_book_from_favorites_decrease_favorites_list` - удаление книги в избранный список должно уменьшать длину списка.
+12. `test_get_books_genre_returns_books_genre` - тест проверки возвращаемого значения функции `get_books_genre`. Через фикстуру создаются книги всех жанров.
 
 
 ## Покрытие тестами
