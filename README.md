@@ -9,10 +9,11 @@
 6. `test_get_book_genre_book_name_returns_genre` - тест проверки возвращаегомого значения функции `get_book_genre`.
 7. `test_get_books_with_specific_genre_returns_book_names` - параметризированный тест функции `get_books_with_specific_genre`. Тест добавляет новую книгу и получает её название по жанру.
 8. `test_get_books_for_children_filter_book_by_genre_age_rating` - тест создает книги всех типов жанров, проверяет что книги полученные в функции `get_books_for_children` не попадают под возрастные ограничения.
-9. `test_add_book_in_favorites_add_book_to_favorites_list` - тест добавления книги в избранный список, проверяется наличие книги с заданным названием.
-10. `test_add_book_in_favorites_increase_favorites_list` - добавление книги в избранный список должно увеличить длину списка.
-11. `test_delete_book_from_favorites_decrease_favorites_list` - удаление книги в избранный список должно уменьшать длину списка.
-12. `test_get_books_genre_returns_books_genre` - тест проверки возвращаемого значения функции `get_books_genre`. Через фикстуру создаются книги всех жанров.
+9. `test_add_book_in_favorites_add_book_to_favorites_list` - тест добавления книги в избранный список, проверяется увелечение списка `favorites`.
+10. `test_get_list_of_favorites_books_retuns_book_names` - проверка возвращаемого значения функции `get_list_of_favorites`, проверяется что возвращаемое название книги соответсвует переданному в функцию `add_book_in_favorites`.
+11. `test_add_book_in_favorites_increase_favorites_list` - добавление книги в избранный список должно увеличить длину списка.
+12. `test_delete_book_from_favorites_decrease_favorites_list` - удаление книги в избранный список должно уменьшать длину списка.
+13. `test_get_books_genre_returns_books_genre` - тест проверки возвращаемого значения функции `get_books_genre`. Через фикстуру создаются книги всех жанров.
 
 
 ## Покрытие тестами

@@ -58,8 +58,14 @@ class TestBooksCollector:
             assert generate_all_books.get_book_genre(children_book) not in data.pre_set_genre_age_rating
 
     def test_add_book_in_favorites_add_book_to_favorites_list(self, generate_all_books):
+        len_before = len(generate_all_books.get_list_of_favorites_books())
         generate_all_books.add_book_in_favorites(data.default_book_names[0])
-        assert generate_all_books.get_list_of_favorites_books() == [data.default_book_names[0]]
+        len_after = len(generate_all_books.get_list_of_favorites_books())
+        assert len_after > len_before
+    
+    def test_get_list_of_favorites_books_retuns_book_names(self, generate_all_books):
+        generate_all_books.add_book_in_favorites(data.default_book_names[0])
+        assert generate_all_books.get_list_of_favorites_books()[0] == data.default_book_names[0]
 
     def test_add_book_in_favorites_increase_favorites_list(self, generate_all_books):
         len_before = len(generate_all_books.get_list_of_favorites_books())
